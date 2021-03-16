@@ -1,0 +1,73 @@
+body {
+  display: block;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
+
+.today-weather {
+  box-sizing: border-box;
+  border: 5px solid red;
+  margin: 10px 100px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: white;
+}
+
+.forecast-weather {
+  box-sizing: border-box;
+  border: 5px solid blue;
+  padding-top: 10px;
+  font-size: 16px;
+  background-color: white;
+}
+
+#place {
+  display: block;
+  text-align: center;
+  padding-top: 10px;
+  text-transform: capitalize;
+}
+
+.temperature,
+.unit {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+  font-size: 25px;
+}
+
+#typeACity,
+#icon,
+#dateAndTime,
+#weatherDescription,
+#precipitation,
+#humidity,
+#wind {
+  display: block;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#icon {
+  font-size: 80px;
+  line-height: 1.2;
+}
+
+#temperature {
+  font-size: 40px;
+}
+
+.btn {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: royalblue;
+}

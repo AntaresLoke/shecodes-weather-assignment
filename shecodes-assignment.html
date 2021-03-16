@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SheCodes Plus Project Week 4</title>
+  <meta charset="UTF-8">
+  <link href="shecodes-assignment.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/c8bd18261b.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="today-weather">
+    <form class="search-form" id="search-form">
+      <input type="search" id="city-input" placeholder="Type a city" autofocus="on" autocomplete="off" />
+      <input type="submit" value="Search">
+      <button id="current-location">Current Location</button>
+    </form>
+
+    <h1 id=place>Malaysia</h1>
+    <span icon="icon" id="icon">🔆</span>
+    <span class="temperature" id="temperature">30</span>
+    <span class="unit">
+      <a href="#" id="celsius-link">°C</a> |
+      <a href="#" id="fahrenheit-link">°F</a>
+    </span>
+
+
+    <h3 id=dateAndTime> Monday 22 February 2021 20:47:50 </h3>
+    <h4 id=weatherDescription> Partly Cloudy </h4>
+    <h6 id=humidity> 77 % </h6>
+    <h6 id=wind> 8 km/h </h6>
+
+    <aside class=forecast-weather>
+      <ul>
+        <li> 🔆 ・ Today ・ Sunny ・ 32° / 28°</li>
+        <li> 🔆 ・ Tomorrow ・ Sunny ・ 32° / 28°</li>
+        <li> 🔆 ・ Wednesday ・ Sunny ・ 32° / 28°</li>
+        <li> 🔆 ・ Thursday ・ Sunny ・ 32° / 28°</li>
+        <li> 🔆 ・ Friday ・ Sunny ・ 32° / 28°</li>
+      </ul>
+    </aside>
+  </div>
+
+  <script src="shecodes-assignment.js"></script>
+</body>
+
+</html>
