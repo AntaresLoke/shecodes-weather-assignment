@@ -6,31 +6,35 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="shecodes-assignment.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c8bd18261b.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
+
   <div class="today-weather">
-    <form class="search-form" id="search-form">
-      <input type="search" id="city-input" placeholder="Type a city" autofocus="on" autocomplete="off" />
-      <input type="submit" value="Search">
-      <button id="current-location">Current Location</button>
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Type a city" autocomplete="off" required/>
+      <button type="search" id="city-search-button" class="fas fa-search-location"></button>
+      <button type="search" id="current-location" class="fas fa-map-marker-alt"></button>
     </form>
 
-    <h1 id=place>Malaysia</h1>
-    <span icon="icon" id="icon">🔆</span>
-    <span class="temperature" id="temperature">30</span>
-    <span class="unit">
-      <a href="#" id="celsius-link">°C</a> |
-      <a href="#" id="fahrenheit-link">°F</a>
-    </span>
-
-
-    <h3 id=dateAndTime> Monday 22 February 2021 20:47:50 </h3>
-    <h4 id=weatherDescription> Partly Cloudy </h4>
-    <h6 id=humidity> 77 % </h6>
-    <h6 id=wind> 8 km/h </h6>
+    <h1 id="place"></h1>
+    <h3 id="dateAndTime"></h3>
+    <img src="" id="icon" width="120" height="120">
+    <h3 id="weatherDescription"></h3>
+    <div class="">
+      <strong id="temperature"></strong>
+      <span class="units">
+        <a href="#" id="celsius-link" class="active">°C</a> |
+        <a href="#" id="fahrenheit-link">°F</a>
+      </span>
+    </div>
+    <span id="humidity"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=wind></span>
 
     <aside class=forecast-weather>
       <ul>
@@ -39,11 +43,10 @@
         <li> 🔆 ・ Wednesday ・ Sunny ・ 32° / 28°</li>
         <li> 🔆 ・ Thursday ・ Sunny ・ 32° / 28°</li>
         <li> 🔆 ・ Friday ・ Sunny ・ 32° / 28°</li>
-      </ul>
     </aside>
-    
+   
   </div>
-  <h7><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">open-source code</a> by Antares Loke</h7>
+  <h6><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">open-source code</a> by Antares Loke</6>
   
   <script src="shecodes-assignment.js"></script>
 </body>
