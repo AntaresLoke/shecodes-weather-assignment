@@ -25,42 +25,24 @@
 
     <h1 id="place"></h1>
     <h3>Last updated: <span id="dateAndTime"></span></h3>
-    <img src="" id="icon" width="120" height="120">
-    <h3 id="weatherDescription"></h3>
-    <div class="">
-      <strong id="temperature"></strong>
-      <span class="units">
-        <a href="#" id="celsius-link" class="active">°C</a> |
-        <a href="#" id="fahrenheit-link">°F</a>
-      </span>
-    </div>
-    <span id="humidity"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=wind></span>
-
-    <aside class=forecast-weather>
-      <div class="container">
-        <div class="row-cols-5">
-          <div class="col">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-          <div class="col">
-            <div class="p-3 border bg-light">Row column</div>
-          </div>
-        </div>
+    <div class="row">
+      <div class="col-6">
+        <img src="" id="icon" width="120" height="120">
+        <h3 id="weatherDescription"></h3>
+        <strong id="temperature"></strong>
+        <span class="units">
+          <a href="#" id="celsius-link" class="active">°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
       </div>
-
-    </aside>
-   
+    </div>
+    <div class="col-6">
+      <span id="humidity"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=wind></span>
+    </div>
+    <div class="row forecast" id="forecast-weather"></div>
+    
   </div>
-  <h6><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">open-source code</a> by Antares Loke</6>
+  <h4><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">open-source code</a> by Antares Loke</h4>
   
   <script src="shecodes-assignment.js"></script>
 </body>

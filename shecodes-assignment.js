@@ -36,9 +36,8 @@ function formatDate(now) {
     let dates = new Date(now);
     let hours = ("0" + dates.getHours()).slice(-2);
     let minutes = ("0" + dates.getMinutes()).slice(-2);
-    let seconds = ("0" + dates.getSeconds()).slice(-2);
 
-    return `${hours}:${minutes}:${seconds}`;
+    return `${hours}:${minutes}`;
   }
 
 //--------- celsius / Fahrenheit ----------------
@@ -68,6 +67,24 @@ let clickCelsius = document.querySelector("#celsius-link");
 clickCelsius.addEventListener("click", convertToCelsius);
 
 //--------- Forecast ------------------------------
+function forecastThressHours(response) {
+  let forecastElement = document.querySelector("#forecast-weather");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+  console.log(response.data.list);
+
+  for (let index = 0; index < 5; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+      <div class="card">
+        <h3 class="card-title">${formatHours(forecast.dt * 1000)}</h3>
+        <h5 class="card-text">Max: ${Math.round(forecast.main.temp_max)}°</h5> 
+        <h5 class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min: ${Math.round(forecast.main.temp_min)}°</h5>
+        <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
+        <h5 class="card-title">${forecast.weather[0].description}</h5>
+      </div>`;
+  }
+}
 
 //----------- Main ---------------------------------
 function searchCity(city) {
@@ -75,8 +92,8 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showSearchCityWeatherDetails);
   
-  let apiUrl2 = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl2).then(forecastEvery3Hours);
+  apiUrl = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(forecastThressHours);
 }
 
 //----------- search current location --------------
@@ -92,9 +109,7 @@ function showPosition(position) {
   let longitude = position.coords.longitude;
   let apiKey = "c7195f08f55692910c7a8c05de972766";
   let apiUrlForShowPosition = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}`;
-  axios
-    .get(`${apiUrlForShowPosition}&appid=${apiKey}&units=metric`)
-    .then(showSearchCityWeatherDetails);
+  axios.get(`${apiUrlForShowPosition}&appid=${apiKey}&units=metric`).then(showSearchCityWeatherDetails);
 }
 
 function getCurrentPosition(event) {
