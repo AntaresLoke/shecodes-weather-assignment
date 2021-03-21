@@ -3,20 +3,18 @@ body {
   text-align: center;
 }
 
-ul {
-  list-style: none;
-}
-
 h6 {
   display: block;
   text-align: center;
-  line-height: 1;
   padding-bottom: 10px;
   font-family: "Courgette", cursive;
 }
 
+ul {
+  list-style: none;
+}
+
 .today-weather {
-  max-width: 500px;
   border: 5px solid red;
   margin: 5px auto;
   padding: 10px;
@@ -27,7 +25,6 @@ h6 {
 
 .forecast-weather {
   margin-top: 10px;
-  box-sizing: border-box;
   border: 5px solid blue;
   padding-top: 5px;
   font-size: 16px;
@@ -35,8 +32,18 @@ h6 {
 }
 
 .units {
+  color: black;
   position: relative;
   top: -15px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
 }
 
 #city-input {
@@ -45,10 +52,17 @@ h6 {
   border-radius: 10px;
 }
 
-#city-search-button,
+#city-search-button {
+  border-radius: 50%;
+  font-size: 28px;
+  line-height: 35px;
+  cursor: pointer;
+}
+
 #current-location {
-  border-radius: 50px;
+  border-radius: 50%;
   font-size: 30px;
+  line-height: 35px;
   cursor: pointer;
 }
 
@@ -67,13 +81,6 @@ h6 {
 
 #weatherDescription {
   text-transform: capitalize;
-}
-
-#typeACity,
-#dateAndTime,
-#humidity,
-#wind {
-  line-height: 1;
 }
 
 #temperature {

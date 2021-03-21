@@ -1,6 +1,6 @@
 //---------- date / time ------------------------
 function formatDate(now) {
-  let date = new Date(now);
+  let dates = new Date(now);
 
   let days = [
     "Sunday",
@@ -11,17 +11,34 @@ function formatDate(now) {
     "Friday",
     "Saturday",
   ];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
-  let day = days[date.getDay()];
-  return `${day} ${formatHours(now)}`;
+  let day = days[dates.getDay()];
+  let date = dates.getDate();
+  let month = months[dates.getMonth()];
+  return `${day}, ${date} ${month} ${formatHours(now)}`;
 }
   
   function formatHours(now) {
-    let date = new Date(now);
-    let hours = ("0" + date.getHours()).slice(-2);
-    let minutes = ("0" + date.getMinutes()).slice(-2);
+    let dates = new Date(now);
+    let hours = ("0" + dates.getHours()).slice(-2);
+    let minutes = ("0" + dates.getMinutes()).slice(-2);
+    let seconds = ("0" + dates.getSeconds()).slice(-2);
 
-    return `${hours}:${minutes}`;
+    return `${hours}:${minutes}:${seconds}`;
   }
 
 //--------- celsius / Fahrenheit ----------------
@@ -50,14 +67,19 @@ clickFahrenheit.addEventListener("click", convertToFahrenheit);
 let clickCelsius = document.querySelector("#celsius-link");
 clickCelsius.addEventListener("click", convertToCelsius);
 
-//----------- search current location --------------
+//--------- Forecast ------------------------------
+
+//----------- Main ---------------------------------
 function searchCity(city) {
   let apiKey = "c7195f08f55692910c7a8c05de972766";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}`;
-  axios
-    .get(`${apiUrl}&appid=${apiKey}&units=metric`)
-    .then(showSearchCityWeatherDetails);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showSearchCityWeatherDetails);
+  
+  let apiUrl2 = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl2).then(forecastEvery3Hours);
 }
+
+//----------- search current location --------------
 
 function handleSubmit(event) {
   event.preventDefault();
