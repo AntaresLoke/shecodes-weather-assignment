@@ -1,7 +1,7 @@
 let currentTime = new Date().getHours();
 if (document.body) {
-    if (7 <= currentTime && currentTime < 20) {
-        document.body.background = "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+    if (7 <= currentTime && currentTime < 19) {
+        document.body.background = "src/samoa.jpeg";
     }
     else {
         document.body.background = "src/nightsky.jpeg";
