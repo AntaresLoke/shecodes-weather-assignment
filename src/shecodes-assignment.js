@@ -80,18 +80,18 @@ function forecastThressHours(response) {
   let forecastElement = document.querySelector("#forecast-weather");
   forecastElement.innerHTML = null;
   let forecast = null;
-  console.log(response.data.list);
 
   for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
       <div class="card">
-        <h3 class="card-title">${formatHours(forecast.dt * 1000)}</h3>
-        <h5 class="card-text">Max: ${Math.round(forecast.main.temp_max)}°</h5> 
-        <h5 class="card-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min: ${Math.round(forecast.main.temp_min)}°</h5>
+        <h3>${formatHours(forecast.dt * 1000)}</h3>
+        <h5>Max: ${Math.round(forecast.main.temp_max)}°</h5> 
+        <h5>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Min: ${Math.round(forecast.main.temp_min)}°</h5>
         <img src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"/>
-        <h5 class="card-title">${forecast.weather[0].description}</h5>
-      </div>`;
+        <h5>${forecast.weather[0].description}</h5>
+      </div>
+    </div>`;
   }
 }
 
