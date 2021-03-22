@@ -4,10 +4,8 @@
 <head>
   <title>SheCodes Plus Project</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="shecodes-assignment.css" />
+  <link rel="stylesheet" href="src/shecodes-assignment.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/c8bd18261b.js" crossorigin="anonymous"></script>
@@ -15,7 +13,6 @@
 </head>
 
 <body>
-
   <div class="today-weather">
     <form id="search-form">
       <input type="text" id="city-input" placeholder="Type a city" autocomplete="off" required/>
@@ -25,26 +22,28 @@
 
     <h1 id="place"></h1>
     <h3>Last updated: <span id="dateAndTime"></span></h3>
-    <div class="row">
-      <div class="col-6">
-        <img src="" id="icon" width="120" height="120">
-        <h3 id="weatherDescription"></h3>
-        <strong id="temperature"></strong>
+    <img src="" id="icon" width="120" height="120">
+    <h3 id="weatherDescription"></h3>
+    <div>  
+      <strong id="temperature"></strong>
         <span class="units">
           <a href="#" id="celsius-link" class="active">°C</a> |
           <a href="#" id="fahrenheit-link">°F</a>
         </span>
-      </div>
     </div>
-    <div class="col-6">
-      <span id="humidity"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id=wind></span>
+    <span id="tempMax"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="humidity"></span>
+    </br>
+    <span id="tempMin"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="wind"></span>
+    </br> 
+    <div class="forecast">
+      <h7>3 hour Forecast</h7>
+      <div class="row forecast" id="forecast-weather"></div>
     </div>
-    <div class="row forecast" id="forecast-weather"></div>
-    
-  </div>
-  <h4><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">open-source code</a> by Antares Loke</h4>
+  </div> 
+
+  <footer><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">Open-source code</a> by Antares Loke</footer>
   
-  <script src="shecodes-assignment.js"></script>
+  <script src="src/shecodes-assignment.js"></script>
 </body>
 
 </html>

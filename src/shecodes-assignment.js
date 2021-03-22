@@ -1,4 +1,13 @@
-//---------- date / time ------------------------
+let currentTime = new Date().getHours();
+if (document.body) {
+    if (7 <= currentTime && currentTime < 20) {
+        document.body.background = "http://itsnotch.com/tumblr/images/daytime_bg.jpg";
+    }
+    else {
+        document.body.background = "src/nightsky.jpeg";
+    }
+}
+
 function formatDate(now) {
   let dates = new Date(now);
 
@@ -127,7 +136,11 @@ function showSearchCityWeatherDetails(response) {
   document.querySelector("#dateAndTime").innerHTML = formatDate(response.data.dt * 1000);
   document.querySelector("#weatherDescription").innerHTML = response.data.weather[0].description;
   celsiusTemperature = response.data.main.temp;
+  maxTemp = Math.round(response.data.main.temp_max);
+  minTemp = Math.round(response.data.main.temp_min);
   document.querySelector("#temperature").innerHTML = Math.round(celsiusTemperature);
+  document.querySelector("#tempMax").innerHTML = `Max Temperature: ${maxTemp}°C`;
+  document.querySelector("#tempMin").innerHTML = `Min Temperature: ${minTemp}°C`;
   document.querySelector("#humidity").innerHTML = `Humidity: ${response.data.main.humidity} %`;
   document.querySelector("#wind").innerHTML = `Wind: ${response.data.wind.speed} km/h`;
   document.querySelector("#icon").setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);

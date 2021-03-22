@@ -2,18 +2,17 @@ body {
   text-align: center;
 }
 
-h4 {
+footer {
+  font-size: 25px;
   display: block;
   text-align: center;
   padding-bottom: 20px;
   font-family: "Courgette", cursive;
-}
-
-ul {
-  list-style: none;
+  color: #fff;
 }
 
 .today-weather {
+  color: #fff;
   max-width: 900px;
   border: 5px solid white;
   margin: 10px auto;
@@ -21,17 +20,20 @@ ul {
   font-size: 20px;
   text-align: center;
   font-family: "Sriracha", cursive;
-  background-color: rgb(114, 166, 245);
+}
+
+.forecast {
+  border-top: 1px solid #fff;
 }
 
 .units {
-  color: black;
+  color: #fff;
   position: relative;
   top: -15px;
 }
 
 .active {
-  color: black;
+  color: #fff;
   cursor: default;
 }
 
@@ -40,14 +42,17 @@ ul {
 }
 
 .card {
-  border: black;
-  background: linear-gradient(to right, rgb(112, 134, 235), rgb(205, 139, 240));
-  margin: 10px auto;
+  background: linear-gradient(to right, rgb(194, 161, 238), rgb(150, 188, 245));
+  opacity: 0.75;
+  margin: 8px auto;
   text-align: center;
   width: 150px;
-  height: 260px;
+  height: 270px;
   padding: 5px;
-  line-height: 0.5;
+}
+
+.card:hover {
+  opacity: 1;
 }
 
 #city-input {
@@ -56,26 +61,21 @@ ul {
   border-radius: 10px;
 }
 
-#city-search-button {
+#city-search-button,
+#current-location {
+  background: linear-gradient(to right, rgb(194, 161, 238), rgb(150, 188, 245));
   border-radius: 50%;
   font-size: 28px;
   line-height: 35px;
+  width: 50px;
   cursor: pointer;
+  opacity: 0.6;
 }
 
-#current-location {
-  border-radius: 50%;
-  font-size: 30px;
-  line-height: 35px;
-  cursor: pointer;
-}
-
-#city-search-button:hover {
-  background-color: rgb(225, 214, 65);
-}
-
+#city-search-button:hover,
 #current-location:hover {
-  background-color: orange;
+  background-color: #fff;
+  opacity: 1;
 }
 
 #place {
