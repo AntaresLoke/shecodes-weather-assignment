@@ -1,5 +1,20 @@
-body {
-  text-align: center;
+body,
+html {
+  width: 100%;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-name: backgroud;
+  animation-duration: 5s;
+}
+
+@keyframes backgroud {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 footer {
@@ -7,16 +22,16 @@ footer {
   display: block;
   text-align: center;
   padding-bottom: 20px;
-  font-family: "Courgette", cursive;
+  font-family: "Sriracha", cursive;
   color: #fff;
 }
 
 .today-weather {
   color: #fff;
   border: 5px solid white;
-  margin: 10px auto;
-  padding: 10px;
-  font-size: 20px;
+  margin: 5px auto;
+  padding: 8px;
+  font-size: 30px;
   text-align: center;
   font-family: "Sriracha", cursive;
 }
@@ -50,6 +65,17 @@ footer {
   width: 150px;
   height: 270px;
   padding: 5px;
+  animation-name: forecastbackgroud;
+  animation-duration: 2s;
+}
+
+@keyframes forecastbackgroud {
+  from {
+    opacity: 0.75;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 .card:hover {
@@ -91,4 +117,11 @@ footer {
 #temperature {
   font-size: 40px;
   font-weight: 50;
+}
+
+#tempMax,
+#tempMin,
+#humidity,
+#wind {
+  font-size: 22px;
 }
