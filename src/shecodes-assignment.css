@@ -58,8 +58,8 @@ footer {
 }
 
 .card {
-  background: linear-gradient(to right, rgb(194, 161, 238), rgb(150, 188, 245));
-  opacity: 0.75;
+  background: linear-gradient(to right, rgb(233, 221, 248), rgb(224, 231, 241));
+  opacity: 0.6;
   margin: 8px auto;
   text-align: center;
   width: 150px;
