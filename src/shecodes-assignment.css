@@ -55,6 +55,7 @@ footer {
 
 .active:hover {
   text-decoration: none;
+  color: #fff;
 }
 
 .card {
