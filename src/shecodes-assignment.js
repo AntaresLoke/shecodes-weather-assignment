@@ -1,12 +1,13 @@
 let currentTime = new Date().getHours();
 if (document.body) {
-  if (7 <= currentTime && currentTime < 18) {
+  if (6 <= currentTime && currentTime < 12) {
+    document.body.background = "src/NZ.jpeg";
+  } else if (12 <= currentTime && currentTime < 18) {
     document.body.background = "src/samoa.jpeg";
   } else if (18 <= currentTime && currentTime < 20) {
     document.body.background = "src/gilitrawanganswings.jpeg";
-  }
-  else {
-    document.body.background = "src/laketekapo.jpeg";
+  } else {
+    document.body.background = "src/galaxy.jpeg";
   }
 }
 

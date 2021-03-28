@@ -58,8 +58,9 @@ footer {
 }
 
 .card {
-  background: linear-gradient(to right, rgb(233, 221, 248), rgb(224, 231, 241));
-  opacity: 0.6;
+  background: linear-gradient(to right, rgb(208, 178, 248), rgb(148, 188, 248));
+  opacity: 0.8;
+  color: black;
   margin: 8px auto;
   text-align: center;
   width: 150px;
@@ -71,10 +72,10 @@ footer {
 
 @keyframes forecastbackgroud {
   from {
-    opacity: 0.75;
+    opacity: 0;
   }
   to {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -84,7 +85,7 @@ footer {
 
 #city-input {
   width: 350px;
-  height: 35px;
+  height: 38px;
   border-radius: 10px;
 }
 
@@ -96,7 +97,7 @@ footer {
   line-height: 35px;
   width: 50px;
   cursor: pointer;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 #city-search-button:hover,
