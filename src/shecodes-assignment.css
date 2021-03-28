@@ -27,6 +27,7 @@ footer {
 }
 
 .today-weather {
+  max-width: 1103px;
   color: #fff;
   border: 5px solid white;
   margin: 5px auto;

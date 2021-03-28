@@ -12,42 +12,32 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm">
-        <div class="today-weather">
-          <form id="search-form">
-            <input type="text" id="city-input" placeholder="Type a city" autocomplete="off" required/>
-            <button type="search" id="city-search-button" class="fas fa-search-location"></button>
-            <button type="search" id="current-location" class="fas fa-map-marker-alt"></button>
-          </form>
+  <div class="today-weather">
+    <form id="search-form">
+      <input type="text" id="city-input" placeholder="Type a city" autocomplete="off" required/>
+      <button type="search" id="city-search-button" class="fas fa-search-location"></button>
+      <button type="search" id="current-location" class="fas fa-map-marker-alt"></button>
+    </form>
 
-          <h1 id="place"></h1>
-          <h3>Last updated: <span id="dateAndTime"></span></h3>
-          <img src="" id="icon" width="135" height="135">
-          <h3 id="weatherDescription"></h3>
-          <div>  
-            <strong id="temperature"></strong>
-              <span class="units">
-                <a href="#" id="celsius-link" class="active">°C</a> |
-                <a href="#" id="fahrenheit-link">°F</a>
-              </span>
-          </div>
-          <span id="tempMax"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="humidity"></span>
-          </br>
-          <span id="tempMin"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="wind"></span>
-          </br>
-        </div>
-      </div>
+    <h1 id="place"></h1>
+    <h3>Last updated: <span id="dateAndTime"></span></h3>
+    <img src="" id="icon" width="135" height="135">
+    <h3 id="weatherDescription"></h3>
+    <div>  
+      <strong id="temperature"></strong>
+        <span class="units">
+          <a href="#" id="celsius-link" class="active">°C</a> |
+          <a href="#" id="fahrenheit-link">°F</a>
+        </span>
     </div>
-  </div>
-  <div class="container2">
-    <div class="row">
-      <div class="col-sm">
-        <div class="forecast-title"><h7>3 hour Forecast</h7></div>
-        <div class="row forecast-weather" id="forecast-weather"></div>
-      </div>
-    </div>
+    <span id="tempMax"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="humidity"></span>
+    </br>
+    <span id="tempMin"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id="wind"></span>
+    </br> 
+
+    <div class="forecast-title"><h7>3 hour Forecast</h7></div>
+    <div class="row forecast-weather" id="forecast-weather"></div>
+      
   </div> 
 
   <footer><a href = "https://github.com/AntaresLoke/shecodes-weather-assignment" target="_blank">Open-source code</a> by Antares Loke</footer>
