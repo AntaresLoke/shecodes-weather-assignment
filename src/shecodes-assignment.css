@@ -73,7 +73,7 @@ footer {
   height: 270px;
   padding: 5px;
   animation-name: forecastbackgroud;
-  animation-duration: 2s;
+  animation-duration: 4s;
 }
 
 @keyframes forecastbackgroud {
